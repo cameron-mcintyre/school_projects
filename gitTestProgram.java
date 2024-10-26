@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class gitTestProgram {
     public static void main(String[] args){
         int it = 1;
