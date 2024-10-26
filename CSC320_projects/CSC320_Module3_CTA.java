@@ -40,6 +40,8 @@ public class CSC320_Module3_CTA {
             default:
                 System.out.println("Your tax rate is 30%");
                 break;
+
+            getinfo.close();
         }   
     }
 }
