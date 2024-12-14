@@ -1,5 +1,6 @@
 package CSC372_projects.CTA;
 
+//This is the base class, BankAccount.
 public class BankAccount {
     
     protected String firstName;
@@ -15,7 +16,6 @@ public class BankAccount {
     }
 
     public void deposit(double depositAmount){
-        
         balance = balance + depositAmount;
     }
 
@@ -23,33 +23,14 @@ public class BankAccount {
         balance = balance - withdrawalAmount;
     }
 
-    public void setFirstName(String newFirstName){
-        this.firstName = newFirstName;
-    }
-
-    public String getFirstName(){
-        return firstName;
-    }
-
-    public void setLastName(String newLastName){
-        this.lastName = newLastName;
-    }
-
-    public String getLastName(){
-        return lastName;
-    }
-
-    public void setAccountID(Integer newAccountID){
-        this.accountID = newAccountID;
-    }
-
-    public int getAccountID(){
-        return accountID;
-    }
-
-    public double getBalance(){
-        return balance;
-    }
+    //Getters and Setters for the various items in the class.
+    public void setFirstName(String newFirstName){this.firstName = newFirstName;}
+    public String getFirstName(){return firstName;}
+    public void setLastName(String newLastName){this.lastName = newLastName;}
+    public String getLastName(){return lastName;}
+    public void setAccountID(Integer newAccountID){this.accountID = newAccountID;}
+    public int getAccountID(){return accountID;}
+    public double getBalance(){return balance;}
 
     public void accountSummary(){
         System.out.println("Account ID: " + accountID);

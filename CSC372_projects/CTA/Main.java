@@ -1,5 +1,4 @@
 package CSC372_projects.CTA;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -7,8 +6,6 @@ public class Main {
     public static void main(String[] args){
 
         Scanner scnr = new Scanner(System.in);
-        ArrayList<BankAccount> allAccounts = new ArrayList<BankAccount>();
-
         String newFirstName;
         String newLastName;
         int newAccountID;
@@ -17,6 +14,7 @@ public class Main {
 
         System.out.println("Welcome to the new bank account creation tool!\n");
 
+        //Getting inputs for the bank account information.
         System.out.println("Please enter the new account holder's first name: ");
         newFirstName = scnr.next();
 
@@ -27,13 +25,15 @@ public class Main {
         newAccountID = scnr.nextInt();
         System.out.println(" ");
 
+        //Comment out the account type you don't wish to create.
+        //BankAccount newAccount = new BankAccount();
         CheckingAccount newAccount = new CheckingAccount();
+        
         newAccount.setFirstName(newFirstName);
         newAccount.setLastName(newLastName);
         newAccount.setAccountID(newAccountID);
-
-        allAccounts.add(newAccount);
         
+        //Reading back the new information.
         newAccount.accountSummary();
         System.out.println(" ");
 
@@ -47,9 +47,9 @@ public class Main {
         newAccount.processWithdrawal(withdrawal);
         System.out.println(" ");
 
+        //Reading back the information that has been updated.
         newAccount.accountSummary();
 
         scnr.close();
-
     }
 }
