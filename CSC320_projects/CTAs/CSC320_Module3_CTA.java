@@ -1,3 +1,4 @@
+package CTAs;
 import java.util.Scanner;
 
 public class CSC320_Module3_CTA {
