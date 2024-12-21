@@ -149,16 +149,11 @@ public class BankingGUI extends JFrame implements ActionListener {
 
         balanceText.setText(Double.toString(balanceAmount));
         initialInput.setText(Double.toString(balanceAmount));
-        
-        //withdrawalInput.setValue(0.0);
-        //depositInput.setValue(0.0);
     }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Page Break~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     public static void main(String[] args){
-        
-        double balance = 0.0;
 
         BankingGUI bankingGUI = new BankingGUI();
         bankingGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
