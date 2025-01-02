@@ -1,4 +1,4 @@
-package CSC372_projects.CTA;
+package CSC372_projects.CTA1;
 
 //This is the base class, BankAccount.
 public class BankAccount {

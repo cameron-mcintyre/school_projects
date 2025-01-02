@@ -1,4 +1,4 @@
-package CSC372_projects.CTA;
+package CSC372_projects.CTA1;
 import java.util.Scanner;
 
 public class Main {

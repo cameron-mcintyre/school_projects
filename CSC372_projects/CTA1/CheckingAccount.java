@@ -1,4 +1,4 @@
-package CSC372_projects.CTA;
+package CSC372_projects.CTA1;
 
 //The CheckingAccount class inherits from the BankAccount class.
 public class CheckingAccount extends BankAccount {
