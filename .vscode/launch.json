@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ShapeArray",
+            "request": "launch",
+            "mainClass": "CSC372_projects.CTA4.ShapeArray",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "Launch JavaFX",
             "request": "launch",
             "mainClass": "CSC372_projects.CTA3.CTA3App",

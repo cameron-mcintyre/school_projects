@@ -1,0 +1,8 @@
+24SD-ITS320-1
+Prof Mortoza Abdullah
+Portfolio Project - CTA Corrections
+Cameron McIntyre
+
+ITS320_CTA6_Option2.py
+
+Program required correction - original program asked for any number of input variables.  The program was corrected to properly ask for only four input variables, instead of a user defined number of variables.  Cartesian coordinates were then constructed from these inputs.

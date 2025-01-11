@@ -1,3 +1,16 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [
+        "c:\\Users\\lenovo\\school_projects\\lib\\javafx.fxml.jar",
+        "c:\\Users\\lenovo\\school_projects\\lib\\javafx.swing.jar",
+        "c:\\Users\\lenovo\\school_projects\\lib\\javafx.media.jar",
+        "c:\\Users\\lenovo\\school_projects\\lib\\javafx.graphics.jar",
+        "c:\\Users\\lenovo\\school_projects\\lib\\javafx.web.jar",
+        "c:\\Users\\lenovo\\school_projects\\lib\\javafx.controls.jar",
+        "c:\\Users\\lenovo\\school_projects\\lib\\javafx.base.jar",
+        "c:\\Users\\lenovo\\school_projects\\lib\\javafx-swt.jar"
+    ]
 }

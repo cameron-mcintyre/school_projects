@@ -1,0 +1,3 @@
+(0, 'Mazda', '3', 'Blue', 2015, 117000, 'scrapped', 0)
+(1, 'Chevy', 'Suburban', 'Blue', 1968, 57000, 'Updated', 35000.0)
+(2, 'BMW', 'Z3', 'Blue', 2001, 123000, 'new', 7000.0)

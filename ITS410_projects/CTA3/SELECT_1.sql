@@ -1,0 +1,3 @@
+/*Write a SELECT statement that joins the Categories table to the Products table and returns these columns: category_name, product_name, list_price.  Sort the result set by the category_name column and then by the product_name column in ascending sequence. Execute the query and take a screenshot of the query and the results.*/
+
+SELECT category_name, product_name, list_price FROM products p INNER JOIN categories c ON p.category_id = c.category_id ORDER BY category_name, product_name ASC
