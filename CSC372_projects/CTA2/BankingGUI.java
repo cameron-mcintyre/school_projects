@@ -69,8 +69,6 @@ public class BankingGUI extends JFrame implements ActionListener {
 
         add(bankingGUIapp);
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Page Break~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
         layoutConst = new GridBagConstraints();
         layoutConst.insets = new Insets(10, 10, 10, 10);
         layoutConst.gridx = 0;
@@ -132,8 +130,6 @@ public class BankingGUI extends JFrame implements ActionListener {
         bankingGUIapp.add(calculateButton, layoutConst);
     }
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Page Break~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
     public void actionPerformed(ActionEvent event){
         double withdrawalAmount;
         double depositAmount;
@@ -147,11 +143,11 @@ public class BankingGUI extends JFrame implements ActionListener {
             balanceAmount = balanceAmount + depositAmount - withdrawalAmount;
         }
 
+        withdrawalInput.setText("0.00"); //PP1 introduced change
+        depositInput.setText("0.00"); //PP1 introduced change
         balanceText.setText(Double.toString(balanceAmount));
         initialInput.setText(Double.toString(balanceAmount));
     }
-
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Page Break~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     public static void main(String[] args){
 

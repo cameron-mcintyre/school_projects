@@ -15,6 +15,7 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.util.Random;
+import javafx.geometry.Insets;
 
 /*Order of operations: 
 1.  create application, 
@@ -43,6 +44,7 @@ public class CTA3App extends Application {
 
         //Create content for pane, a VBox in this case.
         VBox primaryBox = new VBox(10);
+        Insets inset = new Insets(10);  //PP1 new code
         TextArea textOutput = new TextArea();
         MenuItem menuItem1 = new MenuItem("Print current date/time");
         MenuItem menuItem2 = new MenuItem("Print text field to log file");
@@ -52,12 +54,14 @@ public class CTA3App extends Application {
 
         //Add the content to the VBox.
         primaryBox.getChildren().addAll(menuButton, textOutput);
+        VBox.setMargin(menuButton, inset);  //PP1 new code
+        VBox.setMargin(textOutput, inset);  //PP1 new code
 
         //Add the VBox to the pane.
         border.setCenter(primaryBox);
 
         //Add the pane to the scene.
-        scene = new Scene(border, 500, 500);
+        scene = new Scene(border);
 
         //Set the scene into the stage and show it.
         menuApplication.setScene(scene);
@@ -72,16 +76,19 @@ public class CTA3App extends Application {
             }
         });
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Screenshot page break~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
         menuItem2.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent event){
-                try(FileOutputStream fileStream = new FileOutputStream("C:/Users/lenovo/school_projects/CSC372_projects/CTA3/log.txt", true);
+
+                String filePath = "C:/Users/lenovo/school_projects/CSC372_projects/CTA3/log.txt";  //PP1 new code
+                
+                try(FileOutputStream fileStream = new FileOutputStream(filePath, true);
+
                 PrintWriter outFS = new PrintWriter(fileStream)) {
                     outFS.print(textOutput.getText());
-                    textOutput.appendText("\nLog file created!");
+                    textOutput.appendText("\nLog file created: " + filePath); //PP1 new code
                     outFS.close();
+
                 } catch (IOException error) {
                     textOutput.appendText("\nError writing to log file!");
                     error.printStackTrace();

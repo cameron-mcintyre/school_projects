@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "CSC372_projects.CTA1.Main",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "BankingGUI",
+            "request": "launch",
+            "mainClass": "CSC372_projects.CTA2.BankingGUI",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "ShapeArray",
             "request": "launch",
             "mainClass": "CSC372_projects.CTA4.ShapeArray",

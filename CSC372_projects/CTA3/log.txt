@@ -9,3 +9,34 @@ Log file created!
 2025-01-04T10:17:21.615501800
 2025-01-04T10:17:22.470999400
 #49FF3B Random green color set!
+2025-01-12T10:55:47.031555200
+#2BFF64 Random green color set!
+#49FF60 Random green color set!
+#28FF75 Random green color set!
+#0FFF37 Random green color set!
+2025-01-12T10:55:56.851137100
+2025-01-12T10:55:57.881752200
+2025-01-12T10:59:25.359136500
+2025-01-12T10:59:26.050460900
+2025-01-12T10:59:25.359136500
+2025-01-12T10:59:26.050460900
+Log file created: C:/Users/lenovo/school_projects/CSC372_projects/CTA3/log.txt
+#8BFF11 Random green color set!
+#75FF20 Random green color set!
+2025-01-12T10:59:34.272838700
+2025-01-12T10:59:35.985542300
+2025-01-12T11:00:39.508866500
+#51FF2C Random green color set!
+2025-01-12T11:00:43.330255600
+#52FF7D Random green color set!
+2025-01-12T11:00:46.377742
+2025-01-12T11:17:47.258376300
+#8DFF1E Random green color set!
+#12FF65 Random green color set!
+#06FF15 Random green color set!
+2025-01-12T11:17:53.265835100
+2025-01-12T11:17:54.138646200
+2025-01-12T11:21:14.408646100
+#93FF37 Random green color set!
+#07FF24 Random green color set!
+2025-01-12T11:21:17.338527100
