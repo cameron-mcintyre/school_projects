@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RecursionDemo",
+            "request": "launch",
+            "mainClass": "CSC372_projects.CTA5.RecursionDemo",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "Recursion",
+            "request": "launch",
+            "mainClass": "CSC372_projects.DiscussionPosts.Recursion",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "CSC372_projects.CTA1.Main",

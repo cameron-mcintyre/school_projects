@@ -1,4 +1,4 @@
-package CSC372_projects.Module1_discussion;
+package CSC372_projects.DiscussionPosts;
 
 public class PowerSword extends Weapon {
 
