@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ArrayListDemo",
+            "request": "launch",
+            "mainClass": "CSC372_projects.CTA6.ArrayListDemo",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "RecursionDemo",
             "request": "launch",
             "mainClass": "CSC372_projects.CTA5.RecursionDemo",
