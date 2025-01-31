@@ -10,13 +10,16 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.GridLayout;
 
+/*This program uses custom comparators to sort through a list of students.  The students have a custom class "Student" with three parameters - Name, Rollno, and Address.  There are two included sort methods - a method to sort by names, and a method to sort by Rollno (ID number).  The GUI includes several features, such as a reset button, a way to manually add new students, and a button to add 10 default students to test functionality.
+ * 
+ */
 public class ArrayListDemo {
     
     private ArrayList<Student> studentList;
 
-    public ArrayListDemo(){
+    public ArrayListDemo() {
 
-        studentList = new ArrayList<>(10);
+        studentList = new ArrayList<Student>(10);
     }
 
     //This sets up the user interface for the program.
@@ -111,10 +114,10 @@ public class ArrayListDemo {
             Student s3 = new Student(6, "Jason", "76 Timbervine Road");
             Student s4 = new Student(5, "Edwark", "100 Infinity Circle");
             Student s5 = new Student(4, "Cornelius", "6 Jumbo Dump");
-            Student s6 = new Student(1, "Sigismund", "The Fortress of Silence");
-            Student s7 = new Student(7, "X47EAF", "A cabin in the woods");
-            Student s8 = new Student(9, "Kevin", "The Eiffel Tower, France");
-            Student s9 = new Student(2, "Tina", "4 Avenue B");
+            Student s6 = new Student(1, "Sigismund", "7 Angry Men Way");
+            Student s7 = new Student(7, "Xander", "99 Loki Road");
+            Student s8 = new Student(2, "Tina", "4 Avenue B");
+
             studentList.add(0, s0);
             studentList.add(1, s1);
             studentList.add(2, s2);
@@ -124,7 +127,7 @@ public class ArrayListDemo {
             studentList.add(6, s6);
             studentList.add(7, s7);
             studentList.add(8, s8);
-            studentList.add(9, s9);
+            studentList.add(9, s8);
 
             studentArrayField.setText(studentToString(studentList));
         });

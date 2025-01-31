@@ -4,12 +4,13 @@ import java.util.*;
 import java.awt.*;
 import javax.swing.*;
 
-public class RecursionDemo {
+public class Recursion_CTA5_GUI extends Recursion_CTA5_recursiveMethod {
     
+    //Creates the main frame and panels for the GUI.  Two buttons have action listeners - one to start the recursive calculation, and one to reset the UI back to empty fields.
     public static void MainGUI() {
         
         JFrame mainFrame = new JFrame("Recursion Program");
-        mainFrame.setSize(800, 120);
+        mainFrame.setSize(1000, 120);
         JPanel mainPanel = new JPanel();
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
         mainPanel.setLayout(new GridLayout(2, 7, 2, 2));
@@ -21,12 +22,12 @@ public class RecursionDemo {
         JLabel num5title = new JLabel("Number 5");
         JLabel fintitle = new JLabel("Final Answer!");
 
-        JTextField num1 = new JTextField(10);
-        JTextField num2 = new JTextField(10);
-        JTextField num3 = new JTextField(10);
-        JTextField num4 = new JTextField(10);
-        JTextField num5 = new JTextField(10);
-        JTextField finalAns = new JTextField(10);
+        JTextField num1 = new JTextField(5);
+        JTextField num2 = new JTextField(5);
+        JTextField num3 = new JTextField(5);
+        JTextField num4 = new JTextField(5);
+        JTextField num5 = new JTextField(5);
+        JTextField finalAns = new JTextField(20);
         finalAns.setEditable(false);
         JButton calculate1 = new JButton("Calculate!");
         JButton reset = new JButton("Reset");
@@ -34,11 +35,11 @@ public class RecursionDemo {
         calculate1.addActionListener(event -> {
 
             int index = 0;
-            int result;
+            Long result;
             String resultString;
-            ArrayList<Integer> numbersList = new ArrayList<Integer>();
+            ArrayList<Long> numbersList = new ArrayList<Long>();
 
-            numbersList.add(stringToInt(num1.getText()));
+            numbersList.add(stringToInt(checkInputNumLength(num1.getText())));
             numbersList.add(stringToInt(num2.getText()));
             numbersList.add(stringToInt(num3.getText()));
             numbersList.add(stringToInt(num4.getText()));
@@ -81,23 +82,33 @@ public class RecursionDemo {
         mainFrame.setVisible(true);
     }
 
-    public static int stringToInt(String string){
-        return Integer.parseInt(string);
+    //This method converts the string inputs from JTextFields into longs for use in the recursive calculator.  A string is input into the method, and the method returns a long, or generates an error message in the event a non-number is entered.
+    public static Long stringToInt(String string){
+        try {
+            return Long.parseLong(string);
+        } catch (NumberFormatException e) {
+            System.out.println("Error - invalid entry made!");
+            return Long.valueOf(-1);
+        }
+        
     }
 
-    public static String intToString(Integer result){
+    //This method accepts the Long that is the result of the recursive calculations and returns it as a string for display in the GUI.
+    public static String intToString(Long result){
         return String.valueOf(result);
     }
 
-    public static int recursiveMethod(ArrayList<Integer> numbersList, Integer index) {
-
-        if (numbersList.size() == index){
-            return 1;
+    //Overly large numbers tend to blow up during calculation - this method will generate an error message if large numbers are entered as values.  If a number is entered that is overly large (>4 digits), a 0 is returned and an error message displayed.
+    public static String checkInputNumLength(String string) {
+        if (string.length() > 4) {
+            System.out.println("Values cannot be more than four digits!");
+            return "0";
         } else {
-            return numbersList.get(index) * recursiveMethod(numbersList, index + 1);
+            return string;
         }
     }
 
+    //Main method for entry.
     public static void main(String[] args) {
 
         MainGUI();
