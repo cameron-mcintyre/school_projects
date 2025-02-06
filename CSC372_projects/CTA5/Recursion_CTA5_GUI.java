@@ -40,10 +40,10 @@ public class Recursion_CTA5_GUI extends Recursion_CTA5_recursiveMethod {
             ArrayList<Long> numbersList = new ArrayList<Long>();
 
             numbersList.add(stringToInt(checkInputNumLength(num1.getText())));
-            numbersList.add(stringToInt(num2.getText()));
-            numbersList.add(stringToInt(num3.getText()));
-            numbersList.add(stringToInt(num4.getText()));
-            numbersList.add(stringToInt(num5.getText()));
+            numbersList.add(stringToInt(checkInputNumLength(num2.getText())));
+            numbersList.add(stringToInt(checkInputNumLength(num3.getText())));
+            numbersList.add(stringToInt(checkInputNumLength(num4.getText())));
+            numbersList.add(stringToInt(checkInputNumLength(num5.getText())));
 
             result = recursiveMethod(numbersList, index);
 

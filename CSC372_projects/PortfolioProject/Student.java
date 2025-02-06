@@ -1,9 +1,3 @@
-/*Student data are private fields in a student class including:
-
-String name
-String address
-double GPA */
-
 package CSC372_projects.PortfolioProject;
 
 public class Student {
@@ -12,7 +6,7 @@ public class Student {
     private String studentAddress;
     private double studentGPA;
 
-    //Default constructor, added just in case.
+    //default constructor
     public Student(){
 
         studentName = "N/A";
@@ -20,7 +14,7 @@ public class Student {
         studentGPA = 0.0;
     }
 
-    //Specific constructor that properly constructs a student.
+    //parameterized constructor
     public Student(String studentName, String studentAddress, Double studentGPA){
 
         this.studentName = studentName;
@@ -28,29 +22,28 @@ public class Student {
         this.studentGPA = studentGPA;
     }
 
-    //Getters and setters for the student attributes.
-    public void SetStudentName(String studentName){
+    //getters and setters
+    public void setStudentName(String studentName){
         this.studentName = studentName;
     }
 
-    public void SetStudentAddress(String studentAddress){
+    public void setStudentAddress(String studentAddress){
         this.studentAddress = studentAddress;
     }
 
-    public void SetStudentGPA(Double studentGPA){
+    public void setStudentGPA(Double studentGPA){
         this.studentGPA = studentGPA;
     }
 
-    public String GetStudentName(){
+    public String getStudentName(){
         return studentName;
     }
 
-    public String GetStudentAddress(){
+    public String getStudentAddress(){
         return studentAddress;
     }
 
-    public Double GetStudentGPA(){
+    public Double getStudentGPA(){
         return studentGPA;
     }
-
 }

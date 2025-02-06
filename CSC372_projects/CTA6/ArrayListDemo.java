@@ -26,7 +26,7 @@ public class ArrayListDemo {
     public void MainGUI() {
 
         JFrame mainFrame = new JFrame("Array Sorting Demonstration");
-        mainFrame.setSize(600, 800);
+        mainFrame.setSize(600, 600);
 
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new GridLayout(2, 1, 2, 2));

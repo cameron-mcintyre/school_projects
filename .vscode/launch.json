@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "oop",
+            "request": "launch",
+            "mainClass": "CSC372_projects.DiscussionPosts.oop",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "StudentConsole",
+            "request": "launch",
+            "mainClass": "CSC372_projects.PortfolioProject.StudentConsole",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "StudentGUI",
+            "request": "launch",
+            "mainClass": "CSC372_projects.PortfolioProject.StudentGUI",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "InputGUI",
+            "request": "launch",
+            "mainClass": "CSC372_projects.PortfolioProject.InputGUI",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "KidProgram",
+            "request": "launch",
+            "mainClass": "CSC372_projects.DiscussionPosts.KidProgram",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "Collections",
+            "request": "launch",
+            "mainClass": "CSC372_projects.DiscussionPosts.Collections",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "Recursion_CTA5_GUI",
             "request": "launch",
             "mainClass": "CSC372_projects.CTA5.Recursion_CTA5_GUI",
