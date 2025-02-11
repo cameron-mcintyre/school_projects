@@ -28,7 +28,7 @@ public class StudentConsole {
         System.out.println("Welcome to the student enrollment utility!\n");
         
         //main loop with choices
-        while (choice == 1) {
+        while (true) {
             System.out.println("Press 1 to add a student, or 2 to stop adding students and export to a file!");
 
             //validate choice input
@@ -36,7 +36,7 @@ public class StudentConsole {
                 choice = scnr.nextInt();
                 scnr.nextLine();
             } catch (InputMismatchException e) {
-                System.out.println("Please enter a valid value./n");
+                System.out.println("Please enter a valid value.\n");
                 scnr.nextLine();
                 continue;
             }
@@ -57,6 +57,7 @@ public class StudentConsole {
                         continue;
                     } else {
                         studentList.add(new Student(studentName, studentAddress, studentGPA));
+                        System.out.println("Completed!");
                     }
                 } catch (InputMismatchException e) {
                     System.out.println("Please enter a valid GPA!  Student info not added.");
@@ -66,9 +67,12 @@ public class StudentConsole {
             
             //break out of loop to export
             } else if (choice == 2) {
+                System.out.println("Data entry complete!");
                 break;
+            } else { //validate for numbers not 1 or 2
+                System.out.println("Error: please enter 1 or 2!\n");
+                continue;
             }
-            System.out.println("Completed!");
         }
 
         //sort using custom comparator

@@ -1,6 +1,0 @@
----Student Enrollment Record---
----Date of Export: 2025-02-05---
-
-Ash Mc, 54 Sleeping, 3.6
-Boo Seal, 23 Para, 3.2
-Cam McIntyre, 244 Window, 2.1
