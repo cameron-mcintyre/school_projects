@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BagProgram",
+            "request": "launch",
+            "mainClass": "CSC400.BagProgram",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "oop",
             "request": "launch",
             "mainClass": "CSC372_projects.DiscussionPosts.oop",
