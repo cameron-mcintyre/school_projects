@@ -63,6 +63,7 @@ public class BagProgram {
         }
     }
 
+    //searches for items in the bag and indicates t/f
     public static void searchInBag(Bag<Object> newBag, Scanner scnr) {
         Object choice;
 
@@ -84,6 +85,7 @@ public class BagProgram {
         }
     }
 
+    //removes object from the bag
     public static void removeFromBag(Bag<Object> newBag, Scanner scnr) {
         Object choice;
         int itemIndex;
@@ -109,6 +111,7 @@ public class BagProgram {
         }
     }
 
+    //counts items in the bag
     public static void countInBag(Bag<Object> newBag, Scanner scnr) {
         Object choice;
 
