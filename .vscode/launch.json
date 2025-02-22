@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SuitcasePackingApp",
+            "request": "launch",
+            "mainClass": "CSC400.SuitcasePackingApp",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "discussion",
+            "request": "launch",
+            "mainClass": "CSC400.discussion",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "BagProgram",
             "request": "launch",
             "mainClass": "CSC400.BagProgram",

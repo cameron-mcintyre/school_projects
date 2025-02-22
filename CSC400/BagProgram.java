@@ -7,7 +7,7 @@ public class BagProgram {
     public static void main(String[] args) {
 
         Scanner scnr = new Scanner(System.in);
-        Bag<Object> newBag = new Bag<>();
+        Suitcase<Object> newBag = new Suitcase<>();
         int selection;
 
         System.out.println("~~~~Welcome to the Bag Program!~~~~\n");
@@ -35,13 +35,13 @@ public class BagProgram {
     }
 
     //prints the bag and bag item count
-    public static void printBagContents(Bag<Object> newBag) {
-        System.out.println("Current bag contents: " + newBag.printBag());
-        System.out.println("Current number of integers in the bag: " + newBag.countBag());
+    public static void printBagContents(Suitcase<Object> newBag) {
+        System.out.println("\nCurrent bag contents: " + newBag.printBag());
+        System.out.println("Current number of things in the bag: " + newBag.countBag() + "\n");
     }
 
     //adds items to the bag endlessly until a user types N
-    public static void addToBag(Bag<Object> newBag, Scanner scnr) {
+    public static void addToBag(Suitcase<Object> newBag, Scanner scnr) {
         Object input;
         String choice;
 
@@ -64,7 +64,7 @@ public class BagProgram {
     }
 
     //searches for items in the bag and indicates t/f
-    public static void searchInBag(Bag<Object> newBag, Scanner scnr) {
+    public static void searchInBag(Suitcase<Object> newBag, Scanner scnr) {
         Object choice;
 
         while (true) {
@@ -86,7 +86,7 @@ public class BagProgram {
     }
 
     //removes object from the bag
-    public static void removeFromBag(Bag<Object> newBag, Scanner scnr) {
+    public static void removeFromBag(Suitcase<Object> newBag, Scanner scnr) {
         Object choice;
         int itemIndex;
 
@@ -112,7 +112,7 @@ public class BagProgram {
     }
 
     //counts items in the bag
-    public static void countInBag(Bag<Object> newBag, Scanner scnr) {
+    public static void countInBag(Suitcase<Object> newBag, Scanner scnr) {
         Object choice;
 
         while (true) {
