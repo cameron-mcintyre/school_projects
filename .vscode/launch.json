@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Module3CTA",
+            "request": "launch",
+            "mainClass": "CSC400.Module3CTA",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "MathQuestion",
+            "request": "launch",
+            "mainClass": "CSC400.MathQuestion",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "Module3Discussion",
+            "request": "launch",
+            "mainClass": "CSC400.Module3Discussion",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "SuitcasePackingApp",
             "request": "launch",
             "mainClass": "CSC400.SuitcasePackingApp",
