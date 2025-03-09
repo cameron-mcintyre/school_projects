@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PostfixCalc",
+            "request": "launch",
+            "mainClass": "CSC400.Module4CTA.PostfixCalc",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "postfixCalc",
+            "request": "launch",
+            "mainClass": "CSC400.Module4CTA.postfixCalc",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "Module4Disc",
+            "request": "launch",
+            "mainClass": "CSC400.Module4Disc",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "Module3CTA",
             "request": "launch",
             "mainClass": "CSC400.Module3CTA",
