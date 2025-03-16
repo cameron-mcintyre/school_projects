@@ -29,6 +29,7 @@ public class SuitcasePackingApp {
         JFrame mainFrame = new JFrame("Suitcase Packing Application");
         mainFrame.setSize(600, 800);
         mainFrame.setLayout(frameBorderLayout);
+        
 
         //build input panel
         JPanel inputPanel = new JPanel();
@@ -44,6 +45,7 @@ public class SuitcasePackingApp {
         inputPanel.add(inputPanelInputLabel);
         inputPanel.add(inputPanelBagDropdown);
         inputPanel.add(inputPanelInputBox);
+        inputPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
         //build output panel
         JPanel outputPanel = new JPanel();
@@ -60,6 +62,7 @@ public class SuitcasePackingApp {
         outputPanel.add(outputLabel);
         outputPanel.add(outputTextArea);
         outputPanel.add(helpText);
+        outputPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
         //build out button panel
         JPanel buttonPanel = new JPanel();
@@ -76,6 +79,7 @@ public class SuitcasePackingApp {
         buttonPanel.add(mergeSuitcases);
         buttonPanel.add(displaySuitcase1);
         buttonPanel.add(displaySuitcase2);
+        buttonPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
         //indicates that the dropdown menu was changed
         inputPanelBagDropdown.addActionListener(e -> {
@@ -117,12 +121,25 @@ public class SuitcasePackingApp {
             String selection = (String)inputPanelBagDropdown.getSelectedItem();
             try {
                 int inputItem = Integer.parseInt(inputPanelInputBox.getText());
+                
                 if (selection.equals("Suitcase 1")) { //TODO: make it so you can remove items by inputting their value, instead of key
-                    suitcasesList.get(0).remove(inputItem);
-                    outputTextArea.setText("Item removed from suitcase #1.  New suitcase 1 inventory: \n" + suitcasesList.get(0).printBag());
+                    
+                    if(inputItem > suitcasesList.get(0).size()){
+                        outputTextArea.setText("Item is not found in the suitcase!");
+                    } else {
+                        suitcasesList.get(0).remove(inputItem);
+                        outputTextArea.setText("Item removed from suitcase #1.  New suitcase 1 inventory: \n" + suitcasesList.get(0).printBag());
+                    }
+                    
                 } else if (selection.equals("Suitcase 2")) {
-                    suitcasesList.get(1).remove(inputItem);
-                    outputTextArea.setText("Item removed from suitcase #2.  New suitcase 2 inventory: \n" + suitcasesList.get(1).printBag());
+
+                    if(inputItem > suitcasesList.get(1).size()){
+                        outputTextArea.setText("Item is not found in the suitcase!");
+                    } else {
+                        suitcasesList.get(1).remove(inputItem);
+                        outputTextArea.setText("Item removed from suitcase #2.  New suitcase 2 inventory: \n" + suitcasesList.get(1).printBag());
+                    }
+                    
                 } else if (selection.equals("None Selected")) {
                     outputTextArea.setText("Please select a suitcase!");
                 }

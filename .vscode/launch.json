@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RadixSort",
+            "request": "launch",
+            "mainClass": "CSC400.RadixSort",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "recursion",
+            "request": "launch",
+            "mainClass": "CSC400.recursion",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "Ackermann",
             "request": "launch",
             "mainClass": "CSC400.Ackermann",

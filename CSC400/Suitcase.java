@@ -8,14 +8,13 @@ import java.util.Random;
 public class Suitcase<T> {
 
     //Initialize list
-    private HashMap<Integer, T> myBag = new HashMap<>(); //we don't need to order or sort anything, but we want to lookup, add, and remove really quickly.  using a hashmap makes sense.
+    private HashMap<Integer, T> myBag = new HashMap<>();
     private String bagName;
 
     //basic constructor
     public Suitcase() {
         this.myBag = new HashMap<>();
         this.bagName = "";
-
     }
 
     //Add item
@@ -54,7 +53,7 @@ public class Suitcase<T> {
 
     //find an index of an item in the bag
     public int findIndex(T thing) {
-        for (Map.Entry<Integer, T> item : myBag.entrySet()) { //I'm not totally sure what is going on here, I copied from stackoverflow.
+        for (Map.Entry<Integer, T> item : myBag.entrySet()) {
             if (item.getValue() != null && item.getValue().equals(thing)) {
                 return item.getKey();
             } else {

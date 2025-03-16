@@ -1,5 +1,6 @@
 package CSC400;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class BagProgram {
@@ -20,14 +21,20 @@ public class BagProgram {
             System.out.println("4: Remove an item from the bag");
             System.out.println("5: Count the amount of an item in the bag");
             System.out.println("6: Exit");
-            selection = scnr.nextInt();
-
-            if (selection == 1) {addToBag(newBag, scnr);}
-            else if (selection == 2) {printBagContents(newBag);}
-            else if (selection == 3) {searchInBag(newBag, scnr);}
-            else if (selection == 4) {removeFromBag(newBag, scnr);}
-            else if (selection == 5) {countInBag(newBag, scnr);}
-            else if (selection == 6) {break;}
+            
+            try{
+                selection = scnr.nextInt();
+                if (selection == 1) {addToBag(newBag, scnr);}
+                else if (selection == 2) {printBagContents(newBag);}
+                else if (selection == 3) {searchInBag(newBag, scnr);}
+                else if (selection == 4) {removeFromBag(newBag, scnr);}
+                else if (selection == 5) {countInBag(newBag, scnr);}
+                else if (selection == 6) {break;}
+                else { System.out.println("Please make a valid selection!");}
+            } catch(InputMismatchException e){
+                System.out.println("Please make a valid selection!");
+                scnr.next();
+            }
         }
         
         scnr.close(); 
@@ -99,7 +106,7 @@ public class BagProgram {
                 choice = scnr.next();
                 itemIndex = newBag.findIndex(choice);
                 System.out.println("Item of value " + choice + " was removed at index " + itemIndex);
-                newBag.remove(choice);
+                newBag.remove(itemIndex);
                 printBagContents(newBag);
                 continue;
             } else if (choice.equals("N") || choice.equals("n")) {
