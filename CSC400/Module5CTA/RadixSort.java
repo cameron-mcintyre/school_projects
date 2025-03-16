@@ -1,16 +1,8 @@
 package CSC400;
 
 public class RadixSort {
-    
-    public static void main(String[] args){
-        int[] nums = {783, 99, 472, 182, 264, 543, 356, 295, 692, 491, 94};  //required nums
-        //int[] nums = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1}; //test case
-        //int[] nums = {1, 11, 111, 1111, 2, 22, 222, 2222, 3, 33, 333, 3333}; //test case
-        setup(nums);
-        
-    }
 
-    public static void setup(int[] nums){
+    public void setup(int[] nums){
         int[] sorted = new int[nums.length];
         int max = 0;
         int arrayLen = nums.length;
