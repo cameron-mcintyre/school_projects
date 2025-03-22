@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Discussion6",
+            "request": "launch",
+            "mainClass": "CSC450.Discussion6",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "Module6Discussion",
+            "request": "launch",
+            "mainClass": "CSC400.Module6Discussion",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "RadixSortTest",
             "request": "launch",
             "mainClass": "CSC400.RadixSortTest",

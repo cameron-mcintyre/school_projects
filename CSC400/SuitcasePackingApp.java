@@ -82,7 +82,7 @@ public class SuitcasePackingApp {
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
         //indicates that the dropdown menu was changed
-        inputPanelBagDropdown.addActionListener(e -> {
+        inputPanelBagDropdown.addActionListener(_ -> {
             String selection = (String)inputPanelBagDropdown.getSelectedItem();
             if (selection.equals("Suitcase 1")) {
                 outputTextArea.setText("Suitcase 1 Selected!\nNumber of items in suitcase 1: " + suitcasesList.get(0).size() + "\nItems in suitcase 1: " + suitcasesList.get(0).printBag()); 
@@ -94,7 +94,7 @@ public class SuitcasePackingApp {
         });
 
         //add bag button actionlistener
-        addItem.addActionListener(e -> {
+        addItem.addActionListener(_ -> {
             String selection = (String)inputPanelBagDropdown.getSelectedItem();
             String inputItem = inputPanelInputBox.getText();
 
@@ -117,7 +117,7 @@ public class SuitcasePackingApp {
         });
 
         //removes an item of choice
-        removeItem.addActionListener(e -> {
+        removeItem.addActionListener(_ -> {
             String selection = (String)inputPanelBagDropdown.getSelectedItem();
             try {
                 int inputItem = Integer.parseInt(inputPanelInputBox.getText());
@@ -149,7 +149,7 @@ public class SuitcasePackingApp {
         });
 
         //remove duplicates
-        removeDuplicates.addActionListener(e -> {
+        removeDuplicates.addActionListener(_ -> {
             String selection = (String)inputPanelBagDropdown.getSelectedItem();
             Suitcase<String> tempSuitcase = new Suitcase<String>();
 
@@ -169,20 +169,20 @@ public class SuitcasePackingApp {
         });
 
         //merge suitcase 2 into 1
-        mergeSuitcases.addActionListener(e -> {
+        mergeSuitcases.addActionListener(_ -> {
             suitcasesList.get(0).merge(suitcasesList.get(1));
             outputTextArea.setText("New suitcase 1! \n" + suitcasesList.get(0).printBag());
             suitcasesList.get(1).removeAll();
         });
 
         //displays suitcase 1
-        displaySuitcase1.addActionListener(e -> {
+        displaySuitcase1.addActionListener(_ -> {
             outputTextArea.setText("Number of items in suitcase 1: " + suitcasesList.get(0).size() + "\nItems in suitcase 1: " + suitcasesList.get(0).printBag());
             inputPanelBagDropdown.setSelectedItem(suitcasesComboBoxList[1]);
         });
 
         //displays suitcase 2
-        displaySuitcase2.addActionListener(e -> {
+        displaySuitcase2.addActionListener(_ -> {
             outputTextArea.setText("Number of items in suitcase 2: " + suitcasesList.get(1).size() + "\nItems in suitcase 2: " + suitcasesList.get(1).printBag());
             inputPanelBagDropdown.setSelectedItem(suitcasesComboBoxList[2]);
         });

@@ -44,7 +44,7 @@ public class BagProgram {
     //prints the bag and bag item count
     public static void printBagContents(Suitcase<Object> newBag) {
         System.out.println("\nCurrent bag contents: " + newBag.printBag());
-        System.out.println("Current number of things in the bag: " + newBag.countBag() + "\n");
+        System.out.println("Current number of things in the bag: " + /*newBag.countBag() + */"\n");
     }
 
     //adds items to the bag endlessly until a user types N

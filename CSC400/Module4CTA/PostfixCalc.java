@@ -98,89 +98,89 @@ public class PostfixCalc {
         mainFrame.pack();
 
         //Add a million action listeners
-        clrButton.addActionListener(e -> {
+        clrButton.addActionListener(_ -> {
             inputStack.clear();
             calcStack.clear();
             displayField.setText("");
             outputField.setText("");
         });
         
-        addButton.addActionListener(e -> {
+        addButton.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "+");
             inputStack.push("+");
         });
 
-        subButton.addActionListener(e -> {
+        subButton.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "-");
             inputStack.push("-");
         });
 
-        multButton.addActionListener(e -> {
+        multButton.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "x");
             inputStack.push("*");
         });
 
-        divButton.addActionListener(e -> {
+        divButton.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "\u00F7");
             inputStack.push("/");
         });
 
-        modButton.addActionListener(e -> {
+        modButton.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "%");
             inputStack.push("%");
         });
         
-        button0.addActionListener(e -> {
+        button0.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "0");
             inputStack.push("0");
         });
 
-        button1.addActionListener(e -> {
+        button1.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "1");
             inputStack.push("1");
         });
 
-        button2.addActionListener(e -> {
+        button2.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "2");
             inputStack.push("2");
         });
 
-        button3.addActionListener(e -> {
+        button3.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "3");
             inputStack.push("3");
         });
 
-        button4.addActionListener(e -> {
+        button4.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "4");
             inputStack.push("4");
         });
 
-        button5.addActionListener(e -> {
+        button5.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "5");
             inputStack.push("5");
         });
 
-        button6.addActionListener(e -> {
+        button6.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "6");
             inputStack.push("6");
         });
 
-        button7.addActionListener(e -> {
+        button7.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "7");
             inputStack.push("7");
         });
 
-        button8.addActionListener(e -> {
+        button8.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "8");
             inputStack.push("8");
         });
 
-        button9.addActionListener(e -> {
+        button9.addActionListener(_ -> {
             displayField.setText(displayField.getText() + "9");
             inputStack.push("9");
         });
 
-        calcButton.addActionListener(e -> {
+        calcButton.addActionListener(_ -> {
             //There's a lot going on with this button.  Commenting line by line.
             String postFixResult; //Set up a string to display the postfix conversion.
             if(checkInputStack(inputStack) == false){ //We've got to check for bad stacks.

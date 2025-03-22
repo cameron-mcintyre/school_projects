@@ -4,7 +4,6 @@ public class recursion {
     
     public static void main(String[] args){
         long startTime = System.nanoTime();
-        int nums = 3;
         int result = 0;
 
         //for(int i = 0; i < nums + 1; i++){
