@@ -91,7 +91,7 @@ public class StudentGUI extends Student {
                     //sort with every new addition
                     Student newStudent = new Student(studentName, studentAddress, studentGPAdouble);
                     studentList.add(newStudent);
-                    studentList.sort(new NameComparator());
+                    studentList.mergeSort(new NameComparator());
     
                     studentNameField.setText("");
                     studentAddressField.setText("");

@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "sortingTesting",
+            "request": "launch",
+            "mainClass": "CSC400.sortingTesting",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "CSC400.Module6CTA.Main",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "Discussion6",
             "request": "launch",
             "mainClass": "CSC450.Discussion6",

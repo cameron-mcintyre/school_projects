@@ -76,7 +76,7 @@ public class StudentConsole {
         }
 
         //sort using custom comparator
-        studentList.sort(new NameComparator());
+        studentList.mergeSort(new NameComparator());
 
         //generate string for export in file
         for (int i = 0; i < studentList.size(); i++) {
