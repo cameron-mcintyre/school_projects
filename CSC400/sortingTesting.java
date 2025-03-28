@@ -40,26 +40,47 @@ public class sortingTesting {
     }
 
     public static void mergeSort(ArrayList<Integer> list) {
-        if (list.size() < 2) return;
+        if (list.size() < 2) {
+            return; //list of one item.  this is um already sorted
+        }
+        //divide list in the middle
         int mid = list.size() / 2;
+
+        //split into smaller lists
         ArrayList<Integer> left = new ArrayList<>(list.subList(0, mid));
         ArrayList<Integer> right = new ArrayList<>(list.subList(mid, list.size()));
+        
+        //get recursive on the left and right arraylists
+        //this will keep recursively iterating until the size of each array is one object (<2)
         mergeSort(left);
         mergeSort(right);
         merge(list, left, right);
     }
 
     private static void merge(ArrayList<Integer> list, ArrayList<Integer> left, ArrayList<Integer> right) {
-        int i = 0, j = 0, k = 0;
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        //this part is basically just comparing the left to the right subarrays
         while (i < left.size() && j < right.size()) {
-            if (left.get(i) <= right.get(j)) {
+
+            //compare left side to right
+            if (left.get(i) <= right.get(j)) {  //if left is smaller
                 list.set(k++, left.get(i++));
             } else {
-                list.set(k++, right.get(j++));
+                list.set(k++, right.get(j++));  //if left is bigger
             }
         }
-        while (i < left.size()) list.set(k++, left.get(i++));
-        while (j < right.size()) list.set(k++, right.get(j++));
+
+        //now we have to copy the elements back into the array, starting with i
+        while (i < left.size()) {
+            list.set(k++, left.get(i++));
+        }
+        //now we do j
+        while (j < right.size()) {
+            list.set(k++, right.get(j++));
+        }
     }
 
     public static void insertionSort(ArrayList<Integer> list) {
