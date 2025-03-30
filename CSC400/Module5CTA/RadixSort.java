@@ -1,48 +1,84 @@
 package CSC400.Module5CTA;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class RadixSort {
 
-    public void setup(int[] nums){
-        int[] sorted = new int[nums.length];
-        int max = 0;
-        int arrayLen = nums.length;
+    public void setup(ArrayList<Integer> nums){
+        ArrayList<Integer> sortedPos = new ArrayList<Integer>();
+        ArrayList<Integer> sortedNeg = new ArrayList<Integer>();
+        int maxNeg = 0;
+        int maxPos = 0;
+        ArrayList<Integer> numsPos = new ArrayList<Integer>();
+        ArrayList<Integer> numsNeg = new ArrayList<Integer>();
 
-        //find max
-        for(int i = 0; i < arrayLen; i++){
-            if(nums[i] > max){
-                max = nums[i];
+        //separate out the positive from negative numbers in arraylists
+        for(int i = 0; i < nums.size(); i++){
+            if(nums.get(i) > 0){
+                numsPos.add(nums.get(i));
+            } else {
+                numsNeg.add(Math.abs(nums.get(i)));
             }
         }
 
-        //find number of sorts we need to do (number of digits)
+        //find the local max for numsNeg
+        for(int i = 0; i < numsNeg.size(); i++){
+            if(maxNeg < numsNeg.get(i)){
+                maxNeg = numsNeg.get(i);
+            }
+        }
+
+        //find the local max for numsPos
+        for(int i = 0; i < numsPos.size(); i++){
+            if(maxPos < numsPos.get(i)){
+                maxPos = numsPos.get(i);
+            }
+        }
+
+        //this does the sorting based on the digit, starting with the negative numbers
         int exp = 1;
-        while(max / exp >= 1){
+        while(maxNeg / exp >= 1){
             //call the function to sort everything for the digit we're sorting right now.
             //this produces an array "sorted" that is sorted according to the digit, but not entirely sorted.
-            sorted = radixSort(arrayLen, nums, exp);
+            sortedNeg = radixSort(numsNeg.size(), numsNeg, exp);
+            numsNeg = sortedNeg;
+            //move to the next digit (ones, tens, hundreds, thousands, etc)
+            exp = exp * 10;
+        }
+        Collections.reverse(sortedNeg); //we have to reverse the negative numbers
+        //copy the sorted digit array into nums
+        for(int i = 0; i < sortedNeg.size(); i++){
+            sortedNeg.set(i, -(sortedNeg.get(i)));
+        }
 
-            //copy the sorted digit array into nums
-            for(int i = 0; i < arrayLen; i++){
-                nums[i] = sorted[i];
-            }
+        //now we do the positive numbers
+        exp = 1;
+        while(maxPos / exp >= 1){
+            //call the function to sort everything for the digit we're sorting right now.
+            //this produces an array "sorted" that is sorted according to the digit, but not entirely sorted.
+            sortedPos = radixSort(numsPos.size(), numsPos, exp);
+            numsPos = sortedPos;
 
             //move to the next digit (ones, tens, hundreds, thousands, etc)
             exp = exp * 10;
         }
 
+        //clear the main list, and add in the negs, then pos
+        nums.clear();
+        nums.addAll(numsNeg);
+        nums.addAll(numsPos);
+
         //print out the array in order
-        for(int i = 0; i < arrayLen; i++){
-            System.out.println(nums[i]);
+        for(int i = 0; i < nums.size(); i++){
+            System.out.println(nums.get(i));
         }
     }
 
-    //I got help online for this part (thanks geeksforgeeks, yet again)
-    //https://www.geeksforgeeks.org/radix-sort/
-    //this part feels like deep magic to me.  I kind of get what we're doing here,
-    //but it feels like I only have a glimpse.  I'll try to comment through.
-    public static int[] radixSort(int arrayLen, int[] nums, int exp){
+
+    //divides the array into buckets according to the number of that digit
+    private static ArrayList<Integer> radixSort(int arrayLen, ArrayList<Integer> nums, int exp){
         //setup a holding array
-        int[] output = new int[arrayLen];
+        ArrayList<Integer> output = new ArrayList<Integer>();
         int i;
         int count[] = new int[10];
         
@@ -50,7 +86,7 @@ public class RadixSort {
         //these are stored in count[i], which has a sort of watermark of the number of times
         //a number has that digit.
         for(i = 0; i < arrayLen; i++){
-            count[(nums[i] / exp) % 10]++;
+            count[(nums.get(i) / exp) % 10]++;
         }
 
         //this is where it gets confusing.  I had to watch a youtube video to figure out what 
@@ -62,13 +98,17 @@ public class RadixSort {
             count[i] = count[i] + count[i - 1];
         }
 
+        for(int j = 0; j < arrayLen; j++){
+            output.add(0);
+        }
+
         //here we're using our properly arranged count[] array to tell us where each item in nums[]
         //is going to get placed into our output array.
         //count[] has to get dropped for each number we put into the output array to accomodate
         //multiples of each digit.
         for(i = arrayLen - 1; i >= 0; i--){
-            output[count[(nums[i] / exp) % 10] - 1] = nums[i];
-            count[(nums[i] / exp) % 10]--;
+            output.set(count[(nums.get(i) / exp) % 10] - 1, nums.get(i));
+            count[(nums.get(i) / exp) % 10]--;
         }
 
         return output;

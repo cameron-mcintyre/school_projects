@@ -2,6 +2,19 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PosNegRadixSort",
+            "request": "launch",
+            "mainClass": "CSC400.Module5CTA.PosNegRadixSort",
+        },
+        {
+            "type": "java",
+            "name": "RadixSortTest",
+            "request": "launch",
+            "mainClass": "CSC400.Module5CTA.RadixSortTest",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "CSC450.Module7.Main",
@@ -46,14 +59,14 @@
             "type": "java",
             "name": "RadixSortTest",
             "request": "launch",
-            "mainClass": "CSC400.RadixSortTest",
+            "mainClass": "CSC400.Module5CTA.RadixSortTest",
             "projectName": "school_projects_1c0c7ec8"
         },
         {
             "type": "java",
             "name": "RadixSort",
             "request": "launch",
-            "mainClass": "CSC400.RadixSort",
+            "mainClass": "CSC400.Module5CTA.RadixSort",
             "projectName": "school_projects_1c0c7ec8"
         },
         {

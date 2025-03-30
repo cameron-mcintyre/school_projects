@@ -4,14 +4,15 @@ import java.util.NoSuchElementException;
 
 public class CustomLinkedList {
 
-    private Node head;
-    private int size;
+    private Node head; //the first node in the list
+    private int size; //list size so we don't have to count each time
 
     //define a node
     private class Node {
         int data;
         Node next;
 
+        //basic node constructor
         Node(int data) {
             this.data = data;
             this.next = null;
@@ -81,11 +82,13 @@ public class CustomLinkedList {
     private class LinkedListIterator implements Iterator<Integer> {
         private Node current = head;
 
+        //hasnext override method - checks for a following node
         @Override
         public boolean hasNext() {
             return current != null;
         }
 
+        //next override - moves to next node
         @Override
         public Integer next() {
             if (!hasNext()) {throw new NoSuchElementException();}

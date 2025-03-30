@@ -11,10 +11,12 @@ import java.io.FileNotFoundException;
 public class Main {
     public static void main(String[] args) throws IOException {
         
+        //creating new list
         CustomLinkedList linkedList = new CustomLinkedList();
         Scanner scnr = new Scanner(System.in);
         int nums = 0;
 
+        //gets user input to see how many rand nums to add
         System.out.println("Enter the number of integers to add to the file: ");
         try{
             nums = scnr.nextInt();
@@ -22,14 +24,16 @@ public class Main {
             System.out.println("Please enter an integer as an input.");
         }
 
-        writeRandsToFile(nums);
-        readRandsIntoFile(linkedList, nums);
-        printOutList(linkedList);
+        //add random nums to list
+        writeRandsToFile(nums);  //write to file
+        readRandsIntoFile(linkedList, nums); //read from file into list
+        printOutList(linkedList);  //print list
         
+        //delete operation
         System.out.println("Enter the value you wish to delete: ");
         int deleteMe = scnr.nextInt();
-        linkedList.delete(deleteMe);
-        printOutList(linkedList);
+        linkedList.delete(deleteMe);  //call delete method
+        printOutList(linkedList);  //print out list again
 
         scnr.close();
     }
@@ -40,6 +44,7 @@ public class Main {
         Random rand = new Random();
         FileWriter fout = new FileWriter("integers.txt");
 
+        //writes a user input amount of rands into a file
         while(nums > 0){
             int randomNum = rand.nextInt(99);
             String randomString = String.valueOf(randomNum);
@@ -56,6 +61,7 @@ public class Main {
         File randFile = new File("integers.txt");
         Scanner fread = new Scanner(randFile);
 
+        //reads nums from the file
         while(nums > 0){
             try{
                 int temp = Integer.parseInt(fread.nextLine());
