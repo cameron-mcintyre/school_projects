@@ -2,9 +2,30 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PortfolioProjectBad",
+            "request": "launch",
+            "mainClass": "CSC450.PortfolioProject.PortfolioProjectBad",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "PortfolioProject",
+            "request": "launch",
+            "mainClass": "CSC450.PortfolioProject.PortfolioProject",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
+            "name": "dequeue",
+            "request": "launch",
+            "mainClass": "CSC400.dequeue",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "Launch PosNegRadixSort",
             "request": "launch",
-            "mainClass": "CSC400.Module5CTA.PosNegRadixSort",
+            "mainClass": "CSC400.Module5CTA.PosNegRadixSort"
         },
         {
             "type": "java",

@@ -1,7 +1,8 @@
 #include <iostream>
 #include <thread>
 #include <mutex>
-#include <condition_variable> //new tech for this week - conditional variables
+#include <condition_variable>
+#include <time.h>
 using namespace std;
 
 mutex mut; //create a global mutex to lock program memory for threads
@@ -34,9 +35,13 @@ void counter2(){ //counting down thread
 }
 
 int main(){
+	clock_t starttime = clock();
 	thread t1(counter1);
 	thread t2(counter2);
 	t1.join(); //joining both threads at the same time.
 	t2.join();
+	clock_t endtime = clock();
+	clock_t totaltime = endtime - starttime;
+	cout << totaltime << endl;
 	return 0;
 }
