@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "CSC400.Module8PP.Main",
+            "projectName": "school_projects_1c0c7ec8"
+        },
+        {
+            "type": "java",
             "name": "PortfolioProjectBad",
             "request": "launch",
             "mainClass": "CSC450.PortfolioProject.PortfolioProjectBad",
