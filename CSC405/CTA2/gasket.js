@@ -27,7 +27,7 @@ gl.linkProgram(shaderProgram);
 gl.useProgram(shaderProgram);
 
 //some points
-var numPoints = 2000;
+var numPoints = 20000000;
 var points = [];
 var vertices = [vec2(-0.9, -0.9), vec2(0.0, 0.9), vec2(0.9, -0.9)]
 
@@ -67,5 +67,4 @@ gl.viewport(0, 0, canvas.width, canvas.height);
 
 //draw points
 gl.bindBuffer(gl.ARRAY_BUFFER, vertex_buffer);
-gl.vertexAttribPointer(coord, 2, gl.FLOAT, false, 0, 0);
 gl.drawArrays(gl.POINTS, 0, numPoints);
