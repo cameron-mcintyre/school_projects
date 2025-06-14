@@ -115,7 +115,7 @@ var paintersAlgo = function(){
             avgZ = 0;
         }
 
-        trianglesWithZs.sort(function(a, b) { //small sort function.
+        trianglesWithZs.sort(function(a, b) { //sort function.
             return a.avgZ - b.avgZ;
         });
 
@@ -152,7 +152,7 @@ var paintersAlgo = function(){
         }
     }
 
-    function startShaders(gl, vsc, fsc){
+    function startShaders(gl, vsc, fsc){ //initialize shaders
 
         var vertShader = gl.createShader(gl.VERTEX_SHADER);
         gl.shaderSource(vertShader, vsc);
@@ -167,7 +167,8 @@ var paintersAlgo = function(){
         gl.attachShader(shaderProgram, fragShader);
         gl.linkProgram(shaderProgram);
         
-        return shaderProgram;}
+        return shaderProgram;
+    }
 
     window.onload = function init(){
 
@@ -204,11 +205,11 @@ var paintersAlgo = function(){
                 gl.drawArrays(gl.TRIANGLES, i * 3, 3);
         }
 
-        document.getElementById("Button1").onclick = function(){
+        document.getElementById("Button1").onclick = function(){ //the button to toggle depth test
             paintersAlgorithm(vertices, colors);
             render(newVertices, newColors);
         }
-    };
-};
+    }
+}
 
 paintersAlgo();
